@@ -1,0 +1,75 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #282c34;
+    color: white;
+}
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+nav {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+.project {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+}
+form button {
+    padding: 10px;
+    background-color: #61dafb;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+}
