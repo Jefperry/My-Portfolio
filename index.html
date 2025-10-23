@@ -3,121 +3,528 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeff's Portfolio</title>
+    <title>Jefperry Achu Chi | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Hi, I'm Jeff</h1>
-      <p>Aspiring Full-Stack Developer | Computer Programming Student</p>
-      <img src="Jef.jpg" alt="Jef's Profile Picture" class="profile-pic" />
-      <a href="#projects" class="btn">View My Projects</a>
-      <a href="CHI JEFPERRY ACHU Resume.pdf" class="btn" download
-        >Download Resume</a
-      >
-    </header>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">Jefperry Achu Chi</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="CHI JEFPERRY ACHU Resume.pdf" class="nav-link-cta" download
+            >Resume</a
+          >
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        My name is Jefperry Achu Chi. I am a computer programming student at Algonquin College, passionate
-        about building user-friendly and accessible web applications. I enjoy
-        working with HTML, CSS, and JavaScript to create smooth, interactive
-        experiences. I am currently learning Java and MySQL to expand my
-        backend development skills. I am also familiar with Git and GitHub for
-        version control and collaboration. I am always eager to learn new
-        technologies and improve my skills. I believe in the power of teamwork
-        and communication, and I strive to create inclusive and diverse
-        environments in my projects. I am excited to contribute to open-source
-        initiatives and collaborate with others in the tech community.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Weather App</h3>
-        <ul>
-          <li>
-            A simple and modern weather application that allows users to search
-            for any city and view its current weather conditions.
-          </li>
-          <li>
-            This app fetches real-time weather data from the OpenWeatherMap API.
-          </li>
-          <li>
-            It displays the temperature, humidity, wind speed, and weather
-            description.
-          </li>
-          <li>
-            It presents this information in a clean, card-style interface.
-          </li>
-        </ul>
-        <a href="https://github.com/Jefperry/Weather-App.git">GitHub Repo</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name gradient-text">Jefperry Achu Chi</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="typewriter"
+            >Full-Stack Developer | Building Digital Experiences</span
+          >
+        </p>
+        <p class="hero-description">
+          Crafting elegant solutions with code, one pixel at a time.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M7.5 15L12.5 10L7.5 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+        <div class="hero-image">
+          <img src="Jef.jpg" alt="Jefperry Achu Chi" class="profile-img" />
+          <div class="profile-ring"></div>
+          <div class="profile-ring-2"></div>
+        </div>
       </div>
-      <div class="project">
-        <h3>Calculator</h3>
-        <ul>
-          <li>A simple calculator app built with HTML, CSS, and JavaScript.</li>
-          <li>It performs basic arithmetic operations like addition, subtraction, multiplication, and division.</li>
-          <li>The app features a clean and user-friendly interface.</li>
-        </ul>
-        <a href="https://github.com/Jefperry/Calculator.git">GitHub Repo</a>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow">
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <div class="project">
-         <div class="project">
-        <h3>Library-System</h3>
-        <ul>
-          <li>A simple library management system built with  Java(Object-Oriented Programming).</li>
-          <li>It displays a list of books with their details and availability status.</li>
-          <li>It allows users to borrow books and return books.</li>
-          <li>The app features a clean and user-friendly interface.</li>
-
-        </ul>
-        <a href="https://github.com/Jefperry/Library-System.git">GitHub Repo</a>
-        <h3>Portfolio</h3>
-        <ul>
-          <li>A personal portfolio website showcasing my projects and skills.</li>
-          <li>It includes sections for about me, projects, skills, and contact me form section.</li>
-          <li>The design is responsive and user-friendly.</li>
-        </ul>
-        <a href="https://github.com/Jefperry/Portfolio.git">GitHub Repo</a>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Git & GitHub</li>
-        <li>Responsive Design</li>
-        <li>Java</li>
-        <li>MySQL</li>
-        <li>Agile Methodologies</li>
-      </ul>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get to know me</span>
+          <h2 class="section-title">
+            About <span class="gradient-text">Me</span>
+          </h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text glass-card">
+            <p class="about-intro">
+              Hey there! 👋 I'm Jefperry, but you can call me Jeff. I'm a
+              computer programming student at
+              <span class="highlight">Algonquin College</span>, where I
+              transform caffeine into code and bugs into features.
+            </p>
+            <p>
+              I'm passionate about building
+              <span class="highlight">user-friendly web applications</span> that
+              don't just work—they <em>delight</em>. Whether it's crafting
+              smooth interactions with JavaScript, designing responsive layouts,
+              or diving into backend magic with Java and MySQL, I love every
+              aspect of the development journey.
+            </p>
+            <p>
+              When I'm not debugging or pushing commits to GitHub, you'll find
+              me exploring the latest web technologies, contributing to
+              open-source projects, or collaborating with fellow developers to
+              create something amazing. I believe great code is written by great
+              teams, and I'm always excited to connect with like-minded tech
+              enthusiasts.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number gradient-text">5+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number gradient-text">8+</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number gradient-text">100%</span>
+                <span class="stat-label">Commitment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xpwrqnoy" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My work</span>
+          <h2 class="section-title">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1: NoteSummarizer -->
+          <div class="project-card glass-card" data-tilt>
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=800"
+                alt="NoteSummarizer"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="View Live">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 3H21V9"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10 14L21 3"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="project-link" aria-label="View Code">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 19C4.7 20.4 4.7 16.5 3 16M15 21V17.5C15 16.5 15.1 16.1 14.5 15.5C17.3 15.2 20 14.1 20 9.5C19.9988 8.30902 19.5325 7.16279 18.7 6.3C19.0905 5.26191 19.0545 4.11158 18.6 3.1C18.6 3.1 17.5 2.8 15.1 4.4C13.0672 3.87371 10.9328 3.87371 8.9 4.4C6.5 2.8 5.4 3.1 5.4 3.1C4.94548 4.11158 4.90953 5.26191 5.3 6.3C4.46745 7.16279 4.00122 8.30902 4 9.5C4 14.1 6.7 15.2 9.5 15.5C8.9 16.1 8.9 16.7 9 17.5V21"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">AI</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Python</span>
+              </div>
+              <h3 class="project-title">NoteSummarizer</h3>
+              <ul class="project-description">
+                <li>
+                  AI-powered note summarization tool that transforms lengthy
+                  notes into concise, digestible summaries
+                </li>
+                <li>
+                  Leverages natural language processing to extract key insights
+                  and main ideas
+                </li>
+                <li>
+                  Features smart categorization and tagging for easy
+                  organization
+                </li>
+                <li>
+                  Supports multiple input formats including text, PDFs, and
+                  markdown files
+                </li>
+                <li>
+                  Clean, intuitive interface with real-time preview and export
+                  options
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 2: Resume Elevator -->
+          <div class="project-card glass-card" data-tilt>
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1698767008609-f5fa6137b9e6?w=800"
+                alt="Resume Elevator"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="View Live">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 3H21V9"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10 14L21 3"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="project-link" aria-label="View Code">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 19C4.7 20.4 4.7 16.5 3 16M15 21V17.5C15 16.5 15.1 16.1 14.5 15.5C17.3 15.2 20 14.1 20 9.5C19.9988 8.30902 19.5325 7.16279 18.7 6.3C19.0905 5.26191 19.0545 4.11158 18.6 3.1C18.6 3.1 17.5 2.8 15.1 4.4C13.0672 3.87371 10.9328 3.87371 8.9 4.4C6.5 2.8 5.4 3.1 5.4 3.1C4.94548 4.11158 4.90953 5.26191 5.3 6.3C4.46745 7.16279 4.00122 8.30902 4 9.5C4 14.1 6.7 15.2 9.5 15.5C8.9 16.1 8.9 16.7 9 17.5V21"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Career</span>
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <h3 class="project-title">Resume Elevator</h3>
+              <ul class="project-description">
+                <li>
+                  Professional resume optimization platform that elevates your
+                  career narrative
+                </li>
+                <li>
+                  AI-driven analysis provides actionable feedback on content and
+                  formatting
+                </li>
+                <li>
+                  Generates compelling elevator pitches tailored to specific
+                  roles and industries
+                </li>
+                <li>
+                  Includes ATS-friendly templates and keyword optimization
+                </li>
+                <li>
+                  Track application success metrics and iterate for better
+                  results
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2025 Jefperry Achu Chi | Built with using HTML, CSS & JS</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My toolkit</span>
+          <h2 class="section-title">
+            Skills & <span class="gradient-text">Technologies</span>
+          </h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category glass-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card">
+            <div class="skill-icon">⚙️</div>
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card">
+            <div class="skill-icon">🛠️</div>
+            <h3>Tools & Others</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Agile</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My journey</span>
+          <h2 class="section-title">
+            Experience & <span class="gradient-text">Education</span>
+          </h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item glass-card" data-aos="fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Present</span>
+              <h3>Computer Programming Student</h3>
+              <h4>Algonquin College</h4>
+              <p>
+                Pursuing comprehensive full-stack development education,
+                mastering modern web technologies, object-oriented programming,
+                and database management.
+              </p>
+            </div>
+          </div>
+          <div
+            class="timeline-item glass-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3>Open Source Contributor</h3>
+              <h4>GitHub Community</h4>
+              <p>
+                Actively contributing to open-source projects, collaborating
+                with developers worldwide, and building practical applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-title">
+            Let's <span class="gradient-text">Connect</span>
+          </h2>
+          <p class="section-subtitle">
+            Have a project in mind or just want to chat? Drop me a message!
+          </p>
+        </div>
+        <div class="contact-content">
+          <form
+            action="https://formspree.io/f/xpwrqnoy"
+            method="POST"
+            class="contact-form glass-card"
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="_replyto"
+                placeholder="your.email@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your message..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M18.3327 1.66663L9.16602 10.8333"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.3327 1.66663L12.4993 18.3333L9.16602 10.8333L1.66602 7.49996L18.3327 1.66663Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-bracket">&lt;</span>
+              <span class="logo-text">JeffChi</span>
+              <span class="logo-bracket">/&gt;</span>
+            </div>
+            <p>Building the future, one line of code at a time.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Navigation</h4>
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <a
+                href="https://github.com/Jefperry"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/Jefperrry"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a href="CHI JEFPERRY ACHU Resume.pdf" download>Resume</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Jefperry Achu Chi. Crafted with 💜 and lots of ☕</p>
+        </div>
+      </div>
     </footer>
+
+    <!-- Cursor Effect -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
   </body>
 </html>
