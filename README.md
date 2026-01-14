@@ -1,80 +1,73 @@
-# Jefperry Achu Chi Portfolio
+# Welcome to your Lovable project
 
-Welcome to my personal portfolio website!  
-This site showcases my projects, skills, and provides a way to contact me. It is built with **HTML**, **CSS**, and **JavaScript** and features a clean, responsive design with a light/dark mode toggle.
+## Project info
 
----
+**URL**: https://lovable.dev/projects/09a14ae7-bd4a-415b-b22e-66bbeb1a9240
 
-##  Features
+## How can I edit this code?
 
-- **About Me:** Introduction and background information.
-- **Projects:** Highlights of my main projects with descriptions and GitHub links.
-- **Skills:** List of my technical skills.
-- **Contact Me:** Contact form powered by [Formspree](https://formspree.io/) for easy communication.
-- **Download Resume:** Downloadable PDF resume.
-- **Responsive Design:** Looks great on desktop and mobile.
-- 
----
+There are several ways of editing your application.
 
-## Project Structure
+**Use Lovable**
 
+Simply visit the [Lovable Project](https://lovable.dev/projects/09a14ae7-bd4a-415b-b22e-66bbeb1a9240) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
-Porfolio/
-├── index.html         # Main portfolio HTML file
-├── style.css          # Stylesheet for the site
-├── script.js          # JavaScript for interactivity (e.g., theme toggle)
-├── Jef.jpg            # Profile picture
-├── CHI JEFPERRY ACHU Resume.pdf  # Downloadable resume
 
-```
+**Edit a file directly in GitHub**
 
----
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-##  How to Use
+**Use GitHub Codespaces**
 
-1. **Clone or Download the Repository**
-   ```sh
-   git clone https://github.com/Jefperry/My-Portfolio.git
-   cd Portfolio
-   ```
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-2. **Open `index.html` in your browser**
-   - Double-click `index.html` or open it with your preferred browser.
+## What technologies are used for this project?
 
-3. **Contact Form**
-   - The contact form uses [Formspree](https://formspree.io/). You can send me a message directly from the site.
+This project is built with:
 
-4. **Download Resume**
-   - Click the "Download Resume" button in the header to get a PDF copy of my resume.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
----
+## How can I deploy this project?
 
-## 🖥️ Technologies Used
+Simply open [Lovable](https://lovable.dev/projects/09a14ae7-bd4a-415b-b22e-66bbeb1a9240) and click on Share -> Publish.
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Formspree** (for contact form handling)
+## Can I connect a custom domain to my Lovable project?
 
----
+Yes, you can!
 
-## Contact
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-You can contact me through the form on the website, or reach out via [LinkedIn](https://www.linkedin.com/Jefperrry.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgements
-
-- [Formspree](https://formspree.io/) for form handling.
-- Inspiration from modern portfolio designs.
-
----
-
-**Thank you for visiting my portfolio!**
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
