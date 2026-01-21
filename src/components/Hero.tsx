@@ -32,187 +32,148 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,hsl(var(--background))_70%)]" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -right-40 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] opacity-50" />
+        <div className="absolute bottom-1/4 -left-40 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] opacity-30" />
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text Content */}
+        <div className="flex flex-col items-center justify-center text-center">
+
+          {/* Status Indicator */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="order-2 lg:order-1"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-2 mb-8 bg-card/50 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full"
           >
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="section-subheading mb-4"
-            >
-              HELLO, I'M
-            </motion.p>
-            
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+            </span>
+            <span className="text-sm font-medium text-white/80">Available for work</span>
+          </motion.div>
+
+          {/* Main Heading Layered Behind Image */}
+          <div className="relative w-full max-w-5xl mx-auto mb-12">
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight mb-2 relative z-0"
             >
-              Chi Jefperry
-              <span className="block text-gradient">Achu</span>
+              Hello I'm <span className="text-white">Jef</span>
             </motion.h1>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium"
-            >
-              <span>Specializing in </span>
-              <span className="relative inline-block min-w-[200px] md:min-w-[280px]">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentSkillIndex}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute left-0 text-primary font-semibold"
-                    aria-live="polite"
-                    aria-atomic="true"
-                  >
-                    {rotatingSkills[currentSkillIndex]}
-                  </motion.span>
-                </AnimatePresence>
-                {/* Hidden text for screen readers */}
-                <span className="sr-only">
-                  {rotatingSkills.join(", ")}
-                </span>
-              </span>
-            </motion.div>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed"
-            >
-              Innovative Computer Programming student with hands-on experience in full-stack development, 
-              database optimization, and cybersecurity. Passionate about building scalable solutions 
-              that make a real impact.
-            </motion.p>
-            
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex flex-wrap gap-4 mb-10"
-            >
-              <Button size="lg" className="glow-primary" asChild>
-                <a href="#projects">
-                  View My Work
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="#contact">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Get In Touch
-                </a>
-              </Button>
-            </motion.div>
-            
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="flex items-center gap-4"
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.8 + index * 0.1 }}
-                >
-                  <social.icon className="h-5 w-5" />
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-          
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="order-1 lg:order-2 flex justify-center"
-          >
+
             <div className="relative">
-              {/* Decorative Ring */}
+              {/* Profile Image - Centered and Overlapping */}
               <motion.div
-                className="absolute -inset-4 rounded-full border-2 border-primary/30"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              <motion.div
-                className="absolute -inset-8 rounded-full border border-accent/20"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              />
-              
-              {/* Image Container */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glow-primary border-4 border-primary/20">
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+                className="relative z-10 w-64 h-80 md:w-80 md:h-[450px] mx-auto -mt-10 md:-mt-20 overflow-hidden rounded-t-full rounded-b-3xl border-b border-white/10 shadow-2xl"
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20" />
                 <img
                   src={profilePhoto}
                   alt="Chi Jefperry Achu"
                   className="w-full h-full object-cover object-top"
                 />
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-              </div>
-              
-              {/* Floating Badge */}
-              <motion.div
-                className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-              >
-                Open to Work 🚀
               </motion.div>
+
+              {/* Roles Text Layout */}
+              <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-0 hidden md:block">
+                <motion.h2
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  className="text-5xl md:text-7xl lg:text-8xl font-bold text-white/10 flex justify-between w-full px-4 items-center"
+                >
+                  <span>Digital</span>
+                  <span>Designer</span>
+                </motion.h2>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Dynamic Roles/Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="text-xl md:text-2xl text-muted-foreground mb-12 mt-4 max-w-2xl mx-auto font-light"
+          >
+            <span className="inline-block">I am a&nbsp;</span>
+            <span className="relative inline-block min-w-[280px] text-left">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentSkillIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-0 left-0 text-white font-medium italic"
+                >
+                  {rotatingSkills[currentSkillIndex]}
+                </motion.span>
+              </AnimatePresence>
+              {/* Spacer for layout stability */}
+              <span className="invisible">Cybersecurity Analyst</span>
+            </span>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="flex flex-col sm:flex-row items-center gap-6"
+          >
+            <Button size="lg" className="h-14 px-8 text-lg bg-white text-black hover:bg-white/90 rounded-full font-medium" asChild>
+              <a href="#projects" className="flex items-center gap-2">
+                Let's talk
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </Button>
+
+            <div className="flex items-center gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-muted-foreground hover:text-white transition-colors"
+                >
+                  <social.icon className="h-6 w-6" />
+                </a>
+              ))}
             </div>
           </motion.div>
+
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="flex flex-col items-center text-muted-foreground"
-        >
-          <span className="text-xs uppercase tracking-widest mb-2">Scroll</span>
-          <ChevronDown className="h-5 w-5" />
-        </motion.div>
-      </motion.div>
+
+      {/* Footer Stats/Info Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 w-full p-8 border-t border-white/5 bg-background/50 backdrop-blur-md hidden md:block">
+        <div className="container mx-auto flex justify-between items-center text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-primary/50"></span>
+            <span>[01] My Experience</span>
+          </div>
+          <p className="max-w-md text-center">
+            I help founders design modern, high-performing websites that balance clarity & real outcomes.
+          </p>
+          <div>
+            SCROLL DOWN
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };
