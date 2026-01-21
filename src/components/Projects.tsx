@@ -24,7 +24,7 @@ const Projects = () => {
       description: "Intelligent tool that transforms lengthy notes into concise, digestible summaries. Features smart categorization and tagging for easy organization of knowledge.",
       technologies: ["Python", "AI/ML", "NLP", "React"],
       gradient: "from-purple-500 to-pink-500",
-      demoLink: "https://study-assistant-f3bk07cwb-jefperrys-projects.vercel.app/",
+      demoLink: "https://study-assistant-ai-five.vercel.app/",
       githubLink: "https://github.com/Jefperry/Study_Assistant_Ai.git",
       featured: true,
     },
