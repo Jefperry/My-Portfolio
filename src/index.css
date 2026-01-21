@@ -6,93 +6,74 @@
 
 @layer base {
   :root {
-    /* Light Mode - Clean Professional */
-    --background: 0 0% 98%;
-    --foreground: 220 20% 10%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
-    
-    /* Primary: Deep Blue */
-    --primary: 220 90% 56%;
-    --primary-foreground: 0 0% 100%;
-    
+    /* Modern Dark + Lime Green Theme */
+    --background: 0 0% 4%;
+    /* #0a0a0a */
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary: Electric Lime */
+    --primary: 84 81% 55%;
+    /* #a3e635 */
+    --primary-foreground: 0 0% 9%;
+
     /* Secondary */
-    --secondary: 220 20% 96%;
-    --secondary-foreground: 220 20% 10%;
-    
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
     /* Muted */
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 40%;
-    
-    /* Accent: Cyan */
-    --accent: 190 95% 45%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 220 15% 90%;
-    --input: 220 15% 94%;
-    --ring: 220 90% 56%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 63.9%;
+
+    /* Accent */
+    --accent: 84 81% 55%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 84 81% 55%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 84 81% 55%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 14.9%;
+    --sidebar-ring: 84 81% 55%;
   }
 
+  /* Force dark mode behavior even without the class, but keep the class for compatibility */
   .dark {
-    /* Dark Mode - Modern Tech */
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
-    
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
-    
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
-    
-    /* Primary: Vibrant Blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 6%;
-    
-    /* Secondary */
-    --secondary: 222 40% 12%;
-    --secondary-foreground: 210 40% 98%;
-    
-    /* Muted */
-    --muted: 222 40% 14%;
-    --muted-foreground: 215 20% 55%;
-    
-    /* Accent: Cyan Glow */
-    --accent: 190 95% 50%;
-    --accent-foreground: 222 47% 6%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 222 30% 18%;
-    --input: 222 40% 12%;
-    --ring: 217 91% 60%;
-    
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 40% 14%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 30% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 84 81% 55%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 84 81% 55%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 84 81% 55%;
   }
 }
 
@@ -104,73 +85,73 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
+
   /* Modern Typography */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-lime-200 to-primary;
   }
-  
+
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-white;
   }
-  
+
   /* Section Headers */
   .section-heading {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
-  
+
   .section-subheading {
     @apply text-sm uppercase tracking-[0.2em] font-medium text-primary;
   }
-  
+
   /* Glow Effects */
   .glow-primary {
     box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.5);
   }
-  
+
   .glow-accent {
     box-shadow: 0 0 40px -10px hsl(var(--accent) / 0.5);
   }
-  
+
   /* Glass Effect */
   .glass {
     @apply bg-background/80 backdrop-blur-xl border border-border/50;
   }
-  
+
   /* Animated Underline */
   .animated-underline {
     @apply relative;
   }
-  
+
   .animated-underline::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
   }
-  
+
   .animated-underline:hover::after {
     @apply w-full;
   }
-  
+
   /* Tech Card */
   .tech-card {
     @apply bg-card border border-border rounded-xl p-4 transition-all duration-300;
   }
-  
+
   .tech-card:hover {
     @apply border-primary/50 shadow-lg;
     box-shadow: 0 10px 40px -15px hsl(var(--primary) / 0.3);
   }
-  
+
   /* Project Card Hover */
   .project-card {
     @apply relative overflow-hidden rounded-2xl transition-all duration-500;
   }
-  
+
   .project-card::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 transition-opacity duration-500 z-10;
   }
-  
+
   .project-card:hover::before {
     @apply opacity-100;
   }

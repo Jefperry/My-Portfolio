@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,11 +36,10 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "glass shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
@@ -73,8 +71,7 @@ const Navigation = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <ThemeToggle />
-          <Button size="sm" className="glow-primary" asChild>
+          <Button size="sm" className="glow-primary text-black font-semibold" asChild>
             <a href="#contact">
               Hire Me
             </a>
@@ -83,7 +80,6 @@ const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
