@@ -5,12 +5,11 @@ import profilePhoto from "@/assets/profile-photo.jpeg";
 import { useState, useEffect } from "react";
 
 const rotatingSkills = [
-  "Cybersecurity",
-  "Software Development",
-  "SQL Optimization",
-  "Full-Stack Development",
-  "Database Management",
-  "Cloud Solutions",
+  "Software Developer",
+  "SQL Optimizer",
+  "Full-Stack Developer",
+  "Database Administrator",
+  "Cloud Solutions Architect",
 ];
 
 const Hero = () => {
