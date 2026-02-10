@@ -9,33 +9,59 @@ const Experience = () => {
 
   const workExperience = [
     {
-      title: "Software Development & Systems Optimization Intern",
-      company: "AUG/Prudential Beneficial Life Insurance",
-      location: "Remote",
-      period: "May 2024 - Aug 2024",
+      title: "Frontend Developer",
+      company: "Mavoo",
+      location: "Ottawa, Ontario",
+      period: "November 2025 – Present",
+      type: "Part-time",
       achievements: [
-        "Designed and deployed SQL-based database optimization solutions, automating insurance policy validation and reducing processing time by 40%",
-        "Developed a client data tracking system, increasing operational efficiency by 20%",
-        "Led documentation of system changes, process workflows, and configuration guides during cloud migration",
-        "Ensured compliance with GDPR & financial regulatory standards while improving scalability",
-        "Conducted enterprise-scale penetration testing & cybersecurity risk assessments, fortifying data security for 10,000+ customer records",
-        "Led incident response review, identifying vulnerabilities and recommending enhanced security protocols",
+        "Develop new solutions for engineering programs building React/Next.js applications with analytics focus aligned to business needs",
+        "Participate in conceptual and logical engineering designs for data visualization components and frontend architecture",
+        "Work with internal technology partners to ensure engineering solutions meet technical direction, performance, and innovation goals",
+        "Build analytical dashboards and reporting solutions supporting business intelligence initiatives",
+      ],
+    },
+    {
+      title: "IT Support Specialist",
+      company: "Pinnacle Therapy Center",
+      location: "Ottawa, Ontario",
+      period: "May 2025 – August 2025",
+      achievements: [
+        "Designed and deployed engineering solutions automating data validation processes, reducing processing time by 40%",
+        "Analyzed technical requirements to recommend pragmatic solutions for system optimization and efficiency improvements",
+        "Documented system components, applications, and infrastructure ensuring accuracy of technical baseline documents",
+        "Participated in quality reviews ensuring specifications fulfilled business objectives",
+      ],
+    },
+    {
+      title: "Software Optimizer Intern",
+      company: "AUG Prudential Life Insurance",
+      location: "Douala, Cameroon",
+      period: "January 2024 – August 2024",
+      achievements: [
+        "Developed solutions for insurance automation program reducing processing time by 40% across 10,000+ records aligned to business and technology objectives",
+        "Developed client tracking system prototype increasing efficiency by 20%, validating concepts before full implementation",
+        "Analyzed business requirements to recommend sound engineering solutions for database optimization and automation",
+        "Worked with business stakeholders and internal technology partners to ensure solutions met technical direction and performance goals",
+        "Documented and verified system components, applications, infrastructure, security, integration, and operability during Azure cloud migration",
+        "Participated in quality management reviews of designs and prototypes ensuring 90%+ test coverage",
+        "Developed as-built documentation establishing detail levels using configuration management processes",
+        "Identified and recommended opportunities to enhance operational efficiency through automation and process improvements",
       ],
     },
   ];
 
   const education = {
-    degree: "Diploma in Computer Programming",
-    school: "Algonquin College",
-    period: "Expected 2026",
+    degree: "Diploma in Computer Programming (Co-op)",
+    school: "Algonquin College of Applied Arts and Technology",
+    period: "Class of 2025",
+    gpa: "3.54 / 4.0",
     coursework: [
-      "Object Oriented Programming",
-      "Cybersecurity",
+      "Object-Oriented Programming",
+      "System Analysis & Design",
       "Database Management",
       "Web Development",
       "Data Analytics",
-      "Mobile Graphical Interface",
-      "System Analysis and Design",
       "Network Programming",
     ],
   };
@@ -140,9 +166,14 @@ const Experience = () => {
                   {education.school}
                 </p>
                 
-                <div className="flex items-center gap-1 text-sm text-muted-foreground mb-6">
-                  <Calendar className="h-4 w-4" />
-                  {education.period}
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="h-4 w-4" />
+                    {education.period}
+                  </span>
+                  <span className="px-2 py-0.5 bg-accent/10 text-accent text-xs font-bold rounded-full">
+                    GPA: {education.gpa}
+                  </span>
                 </div>
                 
                 <div>

@@ -5,11 +5,11 @@ import profilePhoto from "@/assets/profile-photo.jpeg";
 import { useState, useEffect } from "react";
 
 const rotatingSkills = [
-  "Software Developer",
-  "SQL Optimizer",
-  "Full-Stack Developer",
-  "Database Administrator",
-  "Cloud Solutions Architect",
+  "Software Engineer",
+  "Frontend Developer",
+  "API Developer",
+  "Azure Cloud Engineer",
+  "Python Developer",
 ];
 
 const Hero = () => {
@@ -89,8 +89,8 @@ const Hero = () => {
                   transition={{ delay: 0.6, duration: 0.8 }}
                   className="text-5xl md:text-7xl lg:text-8xl font-bold text-white/10 flex justify-between w-full px-4 items-center"
                 >
-                  <span>Digital</span>
-                  <span>Designer</span>
+                  <span>Software</span>
+                  <span>Support Specialist</span>
                 </motion.h2>
               </div>
             </div>
@@ -165,7 +165,7 @@ const Hero = () => {
             <span>[01] My Experience</span>
           </div>
           <p className="max-w-md text-center">
-            I help founders design modern, high-performing websites that balance clarity & real outcomes.
+            I build engineering solutions, prototypes, and proof of concepts aligned to business objectives.
           </p>
           <div>
             SCROLL DOWN

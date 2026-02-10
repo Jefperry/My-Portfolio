@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,8 +72,9 @@ const Navigation = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <Button size="sm" className="glow-primary text-black font-semibold" asChild>
-            <a href="#contact">
-              Hire Me
+            <a href="/RESUME_.pdf" download>
+              <Download className="h-4 w-4 mr-2" />
+              Download CV
             </a>
           </Button>
         </div>
@@ -119,8 +120,11 @@ const Navigation = () => {
                 transition={{ delay: navLinks.length * 0.1 }}
                 className="pt-4 border-t border-border"
               >
-                <Button className="w-full" onClick={() => scrollToSection("#contact")}>
-                  Hire Me
+                <Button className="w-full" asChild>
+                  <a href="/RESUME_.pdf" download>
+                    <Download className="h-4 w-4 mr-2" />
+                    Download CV
+                  </a>
                 </Button>
               </motion.div>
             </div>

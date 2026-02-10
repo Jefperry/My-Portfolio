@@ -11,19 +11,17 @@ const Skills = () => {
       title: "Languages & Frameworks",
       skills: [
         { name: "Python", level: 90 },
-        { name: "Java", level: 85 },
-        { name: "JavaScript/TypeScript", level: 88 },
-        { name: "React", level: 85 },
-        { name: "Node.js", level: 80 },
+        { name: "Java", level: 90 },
+        { name: "JavaScript/TypeScript", level: 95 },
+        { name: "React", level: 95 },
+        { name: "Node.js", level: 90 },
         { name: "SQL", level: 88 },
-        { name: "C", level: 75 },
+        { name: "Next.js", level: 90 },
       ],
     },
     {
       title: "Cloud & DevOps",
       skills: [
-        { name: "AWS", level: 80 },
-        { name: "Azure", level: 75 },
         { name: "Google Cloud", level: 70 },
         { name: "Docker", level: 82 },
         { name: "Kubernetes", level: 70 },
@@ -43,9 +41,10 @@ const Skills = () => {
   ];
 
   const techStack = [
-    "React", "Next.js", "TypeScript", "Python", "Java", "Node.js",
-    "PostgreSQL", "MongoDB", "Docker", "AWS", "Git", "Supabase",
-    "Power BI", "Tableau", "Flutter", "Bash"
+    "Python", "JavaScript", "TypeScript", "Java", "SQL", "Bash",
+    "React", "Next.js", "FastAPI", "Node.js", "Azure Cloud",
+    "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Git",
+    "Power BI", "Tableau", "Jest", "JUnit", "Agile/SCRUM"
   ];
 
   return (
@@ -85,7 +84,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Skill Bars */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -130,9 +129,9 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <h3 className="text-lg font-semibold mb-4 text-muted-foreground">Soft Skills</h3>
+          <h3 className="text-lg font-semibold mb-4 text-muted-foreground">Key Competencies</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Problem-Solving", "Team Collaboration", "Critical Thinking", "Communication", "Leadership", "Adaptability"].map((skill) => (
+            {["Engineering Solutions", "Technical Analysis", "Azure Cloud & Python", "Documentation", "Analytics Support", "Continuous Learning", "Time Management", "Team Collaboration"].map((skill) => (
               <span
                 key={skill}
                 className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"

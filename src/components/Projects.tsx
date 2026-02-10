@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Code2, Brain, CreditCard, FileText } from "lucide-react";
+import { ExternalLink, Github, Code2, Brain, CreditCard, FileText, Monitor, BarChart3, Landmark } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
@@ -10,41 +10,31 @@ const Projects = () => {
 
   const projects = [
     {
-      icon: Code2,
-      title: "RESTful Web Services",
-      description: "Built RESTful web services using embedded Tomcat, Jersey JAX-RS, and Jackson for JSON processing. Implemented comprehensive testing strategy using JUnit 5 for reliable API endpoints.",
-      technologies: ["Java", "Jersey JAX-RS", "Tomcat", "Jackson", "JUnit 5"],
+      icon: Monitor,
+      title: "Collaborative AI IDE",
+      description: "Developed proof of concept for real-time collaborative coding platform with AI-powered component generation. Engineered WebSocket-based synchronization and Monaco code editor integration with pragmatic architecture meeting performance and innovation goals.",
+      technologies: ["Next.js", "TypeScript", "Azure", "Python", "WebSocket", "Monaco Editor"],
       gradient: "from-blue-500 to-cyan-500",
-      githubLink: "https://github.com/Jefperry/RESTful-Web-Services-with-Embedded-Tomcat.git",
+      demoLink: "https://ai-app-builder-zeta.vercel.app/",
       featured: true,
     },
     {
-      icon: Brain,
-      title: "AI-Powered Note Summarizer",
-      description: "Intelligent tool that transforms lengthy notes into concise, digestible summaries. Features smart categorization and tagging for easy organization of knowledge.",
-      technologies: ["Python", "AI/ML", "NLP", "React"],
+      icon: BarChart3,
+      title: "AI-Powered Analytics Platform",
+      description: "Built engineering solution supporting analytics with Python API development and vector database integration. Developed prototype for semantic search and document processing with cloud deployment, monitoring, and operational support for production.",
+      technologies: ["React", "PostgreSQL", "Python", "FastAPI", "Cloud Deployment"],
       gradient: "from-purple-500 to-pink-500",
       demoLink: "https://study-assistant-ai-five.vercel.app/",
-      githubLink: "https://github.com/Jefperry/Study_Assistant_Ai.git",
       featured: true,
     },
     {
-      icon: CreditCard,
-      title: "Community Savings Platform",
-      description: "Full-stack web application with Next.js 14 and TypeScript to automate payment tracking for community savings groups. Architected secure PostgreSQL database with Row-Level Security.",
-      technologies: ["Next.js 14", "TypeScript", "Supabase", "PostgreSQL", "RLS"],
+      icon: Landmark,
+      title: "Financial Platform",
+      description: "Engineered full-stack solution for financial management with focus on security, integration, and operability. Participated in conceptual and logical engineering designs for data models and system architecture with documented infrastructure.",
+      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Cloud Infrastructure"],
       gradient: "from-green-500 to-emerald-500",
       demoLink: "https://con-lify-oebtc9n13-jefperrys-projects.vercel.app/",
-      githubLink: "https://github.com/Jefperry/ConLify-.git",
       featured: true,
-    },
-    {
-      icon: FileText,
-      title: "Insurance Claims Automation",
-      description: "Automated claims processing system using Python, SQL, and Power BI. Improved insurance claims accuracy and reduced manual processing time by 40%.",
-      technologies: ["Python", "SQL", "Power BI", "Data Analytics"],
-      gradient: "from-orange-500 to-red-500",
-      featured: false,
     },
   ];
 
@@ -62,8 +52,8 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A collection of projects showcasing my expertise in full-stack development,
-            AI/ML integration, and enterprise solutions.
+            A collection of engineering projects showcasing expertise in full-stack development,
+            API integration, cloud deployment, and analytics solutions.
           </p>
         </motion.div>
 
@@ -114,14 +104,6 @@ const Projects = () => {
                       <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                         Live Demo
-                      </a>
-                    </Button>
-                  )}
-                  {project.githubLink && (
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
                       </a>
                     </Button>
                   )}

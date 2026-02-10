@@ -16,18 +16,18 @@ const About = () => {
     },
     {
       icon: Database,
-      title: "Database Optimization",
-      description: "Designing efficient SQL solutions that reduced processing time by 40% in production.",
+      title: "Database & SQL",
+      description: "Designing efficient SQL solutions and database architectures that reduced processing time by 40%.",
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Conducting penetration testing and implementing security protocols for enterprise systems.",
+      title: "API Development",
+      description: "Building RESTful APIs and integrations with FastAPI, Node.js, and JSON processing.",
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Deploying applications on AWS, Azure, and GCP with Docker and Kubernetes.",
+      title: "Azure Cloud",
+      description: "Deploying and managing applications on Azure Cloud with Docker, Kubernetes, and CI/CD pipelines.",
     },
   ];
 
@@ -77,12 +77,12 @@ const About = () => {
               >
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-primary">40%</p>
-                    <p className="text-xs text-muted-foreground">Efficiency Gain</p>
+                    <p className="text-3xl font-bold text-primary">3+</p>
+                    <p className="text-xs text-muted-foreground">Years Experience</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-accent">10K+</p>
-                    <p className="text-xs text-muted-foreground">Records Secured</p>
+                    <p className="text-3xl font-bold text-accent">3.54</p>
+                    <p className="text-xs text-muted-foreground">GPA</p>
                   </div>
                 </div>
               </motion.div>
@@ -97,19 +97,18 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm an innovative and results-driven <span className="text-foreground font-medium">Computer Programming student</span> at 
-                Algonquin College with hands-on experience in IT risk management, data analytics, 
-                and compliance auditing.
+                Solutions-focused <span className="text-foreground font-medium">software engineer</span> with 3 years of experience 
+                developing engineering solutions, prototypes, and proof of concepts aligned to business objectives.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                During my internship at <span className="text-foreground font-medium">Prudential Beneficial Life Insurance</span>, 
-                I automated insurance policy validation, reducing processing time by 40%, and 
-                conducted enterprise-scale security assessments protecting over 10,000 customer records.
+                Proficient in <span className="text-foreground font-medium">Python, Azure Cloud, API development, and full-stack technologies</span>. 
+                Experienced supporting analytics initiatives, testing frameworks, and engineering programs 
+                while delivering quality results and meeting timelines.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm passionate about <span className="text-foreground font-medium">building efficient systems</span> that 
-                solve real-world problems. Currently seeking full-time opportunities where I can 
-                apply my technical expertise while learning from industry professionals.
+                Currently working part-time as a <span className="text-foreground font-medium">Frontend Developer at Mavoo</span> and 
+                open to full-time opportunities where I can apply my technical expertise to build 
+                impactful engineering solutions.
               </p>
             </div>
 
