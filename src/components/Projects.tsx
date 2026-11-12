@@ -4,18 +4,17 @@ import { useRef } from "react";
 import {
   ExternalLink,
   Github,
-  Building2,
-  HeartPulse,
-  Smartphone,
   Monitor,
   BarChart3,
   Landmark,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const logoUrl = (name: string) => `${import.meta.env.BASE_URL}logos/${name}`;
+
 const currentWork = [
   {
-    icon: Building2,
+    logo: logoUrl("landismart.png"),
     title: "LandiSmart",
     role: "Founder & Software Developer",
     status: "In Development",
@@ -26,7 +25,7 @@ const currentWork = [
     demoLink: "https://landismart.com/en",
   },
   {
-    icon: HeartPulse,
+    logo: logoUrl("pinnacle.png"),
     title: "Pinnacle Therapy Center",
     role: "Software Developer",
     status: "Ongoing",
@@ -37,7 +36,7 @@ const currentWork = [
     demoLink: null,
   },
   {
-    icon: Smartphone,
+    logo: logoUrl("mavoo.png"),
     title: "Mavoo",
     role: "Software Developer",
     status: "Shipped",
@@ -115,8 +114,13 @@ const Projects = () => {
 
               <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <project.icon className="h-7 w-7 text-white" />
+                  <div className="w-24 h-16 rounded-xl bg-white border border-border shadow-sm flex items-center justify-center p-2.5 group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={project.logo}
+                      alt={`${project.title} logo`}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain"
+                    />
                   </div>
                   <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
                     {project.status}

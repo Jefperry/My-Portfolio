@@ -52,15 +52,6 @@ const Skills = () => {
     },
   ];
 
-  const techStack = [
-    "JavaScript", "TypeScript", "Python", "Java", "SQL",
-    "React", "Next.js", "React Native", "Expo", "Node.js", "Hono",
-    "OpenAI API", "Anthropic API", "LangChain", "AI Agents", "Claude Code",
-    "PostgreSQL", "MySQL", "SQLite", "Supabase", "Redis", "Drizzle ORM",
-    "Docker", "Cloudflare", "Hetzner", "Coolify", "Vercel", "Azure Cloud",
-    "Vitest", "JUnit", "Postman", "Git", "GitHub"
-  ];
-
   return (
     <section id="skills" className="py-24 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-6">
@@ -74,27 +65,6 @@ const Skills = () => {
           <h2 className="section-heading">
             Skills & <span className="text-gradient">Technologies</span>
           </h2>
-        </motion.div>
-
-        {/* Tech Stack Pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-16"
-        >
-          {techStack.map((tech, index) => (
-            <motion.span
-              key={tech}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-              className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-default"
-            >
-              {tech}
-            </motion.span>
-          ))}
         </motion.div>
 
         {/* Skill Bars */}
@@ -145,7 +115,7 @@ const Skills = () => {
         >
           <h3 className="text-lg font-semibold mb-4 text-muted-foreground">Key Competencies</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Full-Stack Development", "AI & Automation", "Mobile Development", "API Integration", "Database Optimization", "Cloud & DevOps", "Technical Support", "Continuous Learning", "Team Collaboration"].map((skill) => (
+            {["AI & Automation", "Mobile Development", "API Integration", "Database Optimization", "Cloud & DevOps", "Technical Support", "Continuous Learning", "Team Collaboration"].map((skill) => (
               <span
                 key={skill}
                 className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"

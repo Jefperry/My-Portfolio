@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Sparkles, Cloud, Users, Lightbulb, Smartphone } from "lucide-react";
+import { Sparkles, Cloud, Users, Lightbulb, Smartphone } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const About = () => {
@@ -9,11 +9,6 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const highlights = [
-    {
-      icon: Code2,
-      title: "Full-Stack Development",
-      description: "Building responsive web applications with TypeScript, React, Next.js, and Hono-backed APIs.",
-    },
     {
       icon: Smartphone,
       title: "Mobile Development",
@@ -128,7 +123,7 @@ const About = () => {
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 max-w-6xl mx-auto">
           {highlights.map((item, index) => (
             <motion.div
               key={item.title}
