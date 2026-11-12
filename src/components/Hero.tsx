@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 
 const rotatingSkills = [
   "Software Developer",
-  "IT Support Specialist",
-  "IT Technician",
-  "Technical Support Engineer",
-  "Help Desk Analyst",
+  "AI & Automation Engineer",
+  "Full-Stack Developer",
+  "Mobile App Developer",
+  "Technical Support Specialist",
 ];
 
 const Hero = () => {
@@ -50,7 +50,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
             </span>
-            <span className="text-sm font-medium text-white/80">Available for work</span>
+            <span className="text-sm font-medium text-white/80">Open to opportunities</span>
           </motion.div>
 
           {/* Main Heading Layered Behind Image */}
@@ -90,7 +90,7 @@ const Hero = () => {
                   className="text-5xl md:text-7xl lg:text-8xl font-bold text-white/10 flex justify-between w-full px-4 items-center"
                 >
                   <span>Software</span>
-                  <span>Support Specialist</span>
+                  <span>AI & Automation</span>
                 </motion.h2>
               </div>
             </div>
@@ -119,7 +119,7 @@ const Hero = () => {
                 </motion.span>
               </AnimatePresence>
               {/* Spacer for layout stability */}
-              <span className="invisible">Cybersecurity Analyst</span>
+              <span className="invisible">Technical Support Specialist</span>
             </span>
           </motion.div>
 
@@ -165,7 +165,7 @@ const Hero = () => {
             <span>[01] My Experience</span>
           </div>
           <p className="max-w-md text-center">
-            I build engineering solutions, prototypes, and proof of concepts aligned to business objectives.
+            I build responsive web and mobile applications with TypeScript, React, Next.js, and React Native — with hands-on work in LLM integrations, AI agents, and workflow automation.
           </p>
           <div>
             SCROLL DOWN

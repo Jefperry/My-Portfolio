@@ -58,7 +58,7 @@ const Contact = () => {
             Let's Work <span className="text-gradient">Together</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            I'm currently looking for full-time opportunities as a Junior Software Developer. 
+            I'm open to software development opportunities and collaborations.
             Let's connect and discuss how I can contribute to your team!
           </p>
         </motion.div>
@@ -147,9 +147,9 @@ const Contact = () => {
                   Ready to bring value to your team
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  With hands-on experience in full-stack development, database optimization, 
-                  and cybersecurity, I'm eager to contribute to meaningful projects while 
-                  continuing to grow as a developer.
+                  With hands-on experience across full-stack development, mobile apps, AI
+                  integrations, database optimization, and technical support, I'm eager to
+                  contribute to meaningful products while continuing to grow as a developer.
                 </p>
                 
                 <div className="space-y-4">
@@ -173,7 +173,7 @@ const Contact = () => {
                 </div>
                 
                 <p className="text-center text-sm text-muted-foreground mt-6">
-                  Currently available for full-time positions
+                  Currently open to new opportunities
                 </p>
               </div>
             </div>

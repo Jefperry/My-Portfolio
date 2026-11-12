@@ -8,12 +8,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Derive the router basename from Vite's base so dev ("/") and the
+// GitHub Pages project path ("/My-Portfolio/") both render.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/My-Portfolio">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />

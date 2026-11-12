@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, GraduationCap, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, MapPin, CheckCircle2, Award } from "lucide-react";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -9,53 +9,59 @@ const Experience = () => {
 
   const workExperience = [
     {
-      title: "Frontend Developer",
+      title: "Founder & Software Developer",
+      company: "LandiSmart",
+      location: "Remote",
+      period: "May 2026 – Present",
+      type: "Founder",
+      achievements: [
+        "Lead the technical architecture and implementation of an in-development property-management platform for African landlords, collaborating with other developers",
+        "Build the web application and admin portal with Next.js and the mobile application with React Native and Expo, backed by PostgreSQL, Drizzle, Better Auth, Redis/BullMQ, Cloudflare, and Hetzner/Coolify infrastructure",
+        "Develop and use a LangChain-based AI agent with OpenAI and Anthropic APIs to support engineering workflows; design integrations for payments (CamPay, Stripe), messaging, email, push notifications, analytics, and realtime services",
+      ],
+    },
+    {
+      title: "Software Developer",
+      company: "Pinnacle Therapy Center",
+      location: "Carling, Ontario",
+      period: "July 2026 – Present",
+      type: "Hybrid",
+      achievements: [
+        "Designed and deployed an AI-powered voice-response and automated appointment-scheduling workflow using Dialzara to reduce manual booking tasks",
+        "Built and maintain the clinic website on GoDaddy; developed patient intake forms and a mobile-responsive booking system integrated with JaneApp",
+        "Integrated an AI email-routing pipeline and third-party telehealth tools into the clinic's digital infrastructure; assist patients with booking problems, scheduling questions, and general website or technical issues",
+      ],
+    },
+    {
+      title: "Software Developer",
       company: "Mavoo",
       location: "Ottawa, Ontario",
-      period: "November 2025 – Present",
-      type: "Part-time",
+      period: "November 2025 – May 2026",
+      type: "Remote",
       achievements: [
-        "Develop new solutions for engineering programs building React/Next.js applications with analytics focus aligned to business needs",
-        "Participate in conceptual and logical engineering designs for data visualization components and frontend architecture",
-        "Work with internal technology partners to ensure engineering solutions meet technical direction, performance, and innovation goals",
-        "Build analytical dashboards and reporting solutions supporting business intelligence initiatives",
+        "Implemented the full web-application frontend using TypeScript and Next.js, integrating user-facing features with backend APIs while collaborating with a development team",
+        "Developed selected mobile application screens and features, including sign-in and home screens, using Claude Code in an AI-assisted development workflow",
       ],
     },
     {
-      title: "IT Support Specialist",
-      company: "Pinnacle Therapy Center",
-      location: "Ottawa, Ontario",
-      period: "May 2025 – August 2025",
-      achievements: [
-        "Designed and deployed engineering solutions automating data validation processes, reducing processing time by 40%",
-        "Analyzed technical requirements to recommend pragmatic solutions for system optimization and efficiency improvements",
-        "Documented system components, applications, and infrastructure ensuring accuracy of technical baseline documents",
-        "Participated in quality reviews ensuring specifications fulfilled business objectives",
-      ],
-    },
-    {
-      title: "Software Optimizer Intern",
-      company: "AUG Prudential Life Insurance",
+      title: "Software Development & Systems Optimization Intern",
+      company: "AUG / Prudential Beneficial Life Insurance",
       location: "Douala, Cameroon",
-      period: "January 2024 – August 2024",
+      period: "May 2024 – August 2024",
+      type: "Remote",
       achievements: [
-        "Developed solutions for insurance automation program reducing processing time by 40% across 10,000+ records aligned to business and technology objectives",
-        "Developed client tracking system prototype increasing efficiency by 20%, validating concepts before full implementation",
-        "Analyzed business requirements to recommend sound engineering solutions for database optimization and automation",
-        "Worked with business stakeholders and internal technology partners to ensure solutions met technical direction and performance goals",
-        "Documented and verified system components, applications, infrastructure, security, integration, and operability during Azure cloud migration",
-        "Participated in quality management reviews of designs and prototypes ensuring 90%+ test coverage",
-        "Developed as-built documentation establishing detail levels using configuration management processes",
-        "Identified and recommended opportunities to enhance operational efficiency through automation and process improvements",
+        "Optimized SQL database operations and automated insurance-policy validation, reducing processing time by 40% and improving client data-tracking efficiency by 20%",
+        "Documented system changes, workflows, and configuration guides during a cloud migration of financial transaction systems under GDPR and financial regulatory requirements",
+        "Conducted penetration testing and cybersecurity risk assessments across systems holding 10,000+ customer records",
       ],
     },
   ];
 
   const education = {
-    degree: "Diploma in Computer Programming (Co-op)",
-    school: "Algonquin College of Applied Arts and Technology",
-    period: "Class of 2025",
-    gpa: "3.54 / 4.0",
+    degree: "Diploma in Computer Programming",
+    school: "Algonquin College, Ottawa, Ontario",
+    period: "Completed December 2025",
+    gpa: "3.5 / 4.0",
     coursework: [
       "Object-Oriented Programming",
       "System Analysis & Design",
@@ -65,6 +71,14 @@ const Experience = () => {
       "Network Programming",
     ],
   };
+
+  const certifications = [
+    "Agile Foundations",
+    "Agile Development Practices",
+    "Agile at Work: Building Your Agile Team",
+    "Agile at Work: Getting Better with Agile Retrospectives",
+    "Project Management Foundations: Requirements",
+  ];
 
   return (
     <section id="experience" className="py-24 bg-muted/30" ref={ref}>
@@ -111,7 +125,7 @@ const Experience = () => {
                     {job.company}
                   </p>
                   
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       {job.period}
@@ -120,6 +134,11 @@ const Experience = () => {
                       <MapPin className="h-4 w-4" />
                       {job.location}
                     </span>
+                    {job.type && (
+                      <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-semibold rounded-full">
+                        {job.type}
+                      </span>
+                    )}
                   </div>
                   
                   <ul className="space-y-3">
@@ -197,23 +216,26 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Activities */}
+            {/* Certifications */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-8 bg-card border border-border rounded-2xl p-6"
             >
-              <h4 className="text-lg font-bold mb-4">Activities & Contributions</h4>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-accent/10">
+                  <Award className="h-5 w-5 text-accent" />
+                </div>
+                <h4 className="text-lg font-bold">Certifications</h4>
+              </div>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li className="flex gap-3">
-                  <span className="text-primary">•</span>
-                  Volunteer English Tutor for Kids with Disabilities at Algonquin College CAL Center
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-primary">•</span>
-                  Active open-source contributor, collaborating with developers worldwide
-                </li>
+                {certifications.map((cert) => (
+                  <li key={cert} className="flex gap-3">
+                    <CheckCircle2 className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                    <span>{cert}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </motion.div>

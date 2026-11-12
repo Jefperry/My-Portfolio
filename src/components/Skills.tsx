@@ -10,41 +10,55 @@ const Skills = () => {
     {
       title: "Languages & Frameworks",
       skills: [
+        { name: "JavaScript / TypeScript", level: 95 },
+        { name: "React / Next.js", level: 95 },
+        { name: "React Native / Expo", level: 88 },
         { name: "Python", level: 90 },
-        { name: "Java", level: 90 },
-        { name: "JavaScript/TypeScript", level: 95 },
-        { name: "React", level: 95 },
-        { name: "Node.js", level: 90 },
+        { name: "Java", level: 85 },
+        { name: "Node.js / Hono", level: 88 },
         { name: "SQL", level: 88 },
-        { name: "Next.js", level: 90 },
       ],
     },
     {
-      title: "Cloud & DevOps",
+      title: "AI & Automation",
       skills: [
-        { name: "Google Cloud", level: 70 },
-        { name: "Docker", level: 82 },
-        { name: "Kubernetes", level: 70 },
+        { name: "OpenAI / Anthropic APIs", level: 90 },
+        { name: "LangChain", level: 85 },
+        { name: "AI Agents", level: 85 },
+        { name: "Claude Code", level: 90 },
+        { name: "Workflow Automation", level: 88 },
+      ],
+    },
+    {
+      title: "Cloud & Infrastructure",
+      skills: [
+        { name: "Docker", level: 85 },
+        { name: "Cloudflare", level: 82 },
+        { name: "Hetzner / Coolify", level: 80 },
         { name: "CI/CD", level: 78 },
+        { name: "Azure Cloud", level: 75 },
       ],
     },
     {
       title: "Tools & Databases",
       skills: [
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Git", level: 90 },
-        { name: "Power BI", level: 82 },
-        { name: "Linux", level: 80 },
+        { name: "PostgreSQL", level: 88 },
+        { name: "MySQL / SQLite / Supabase", level: 85 },
+        { name: "Redis / BullMQ", level: 80 },
+        { name: "Drizzle ORM", level: 85 },
+        { name: "Git / GitHub", level: 90 },
+        { name: "Vercel", level: 88 },
       ],
     },
   ];
 
   const techStack = [
-    "Python", "JavaScript", "TypeScript", "Java", "SQL", "Bash",
-    "React", "Next.js", "FastAPI", "Node.js", "Azure Cloud",
-    "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Git",
-    "Power BI", "Tableau", "Jest", "JUnit", "Agile/SCRUM"
+    "JavaScript", "TypeScript", "Python", "Java", "SQL",
+    "React", "Next.js", "React Native", "Expo", "Node.js", "Hono",
+    "OpenAI API", "Anthropic API", "LangChain", "AI Agents", "Claude Code",
+    "PostgreSQL", "MySQL", "SQLite", "Supabase", "Redis", "Drizzle ORM",
+    "Docker", "Cloudflare", "Hetzner", "Coolify", "Vercel", "Azure Cloud",
+    "Vitest", "JUnit", "Postman", "Git", "GitHub"
   ];
 
   return (
@@ -131,7 +145,7 @@ const Skills = () => {
         >
           <h3 className="text-lg font-semibold mb-4 text-muted-foreground">Key Competencies</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Engineering Solutions", "Technical Analysis", "Azure Cloud & Python", "Documentation", "Analytics Support", "Continuous Learning", "Time Management", "Team Collaboration"].map((skill) => (
+            {["Full-Stack Development", "AI & Automation", "Mobile Development", "API Integration", "Database Optimization", "Cloud & DevOps", "Technical Support", "Continuous Learning", "Team Collaboration"].map((skill) => (
               <span
                 key={skill}
                 className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"

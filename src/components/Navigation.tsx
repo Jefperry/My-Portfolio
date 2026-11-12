@@ -6,6 +6,7 @@ import { Menu, X, Download } from "lucide-react";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const resumeUrl = `${import.meta.env.BASE_URL}Chi-Jefperry-Achu-Resume.pdf`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +73,7 @@ const Navigation = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <Button size="sm" className="glow-primary text-black font-semibold" asChild>
-            <a href="/RESUME_.pdf" download>
+            <a href={resumeUrl} download>
               <Download className="h-4 w-4 mr-2" />
               Download CV
             </a>
@@ -121,7 +122,7 @@ const Navigation = () => {
                 className="pt-4 border-t border-border"
               >
                 <Button className="w-full" asChild>
-                  <a href="/RESUME_.pdf" download>
+                  <a href={resumeUrl} download>
                     <Download className="h-4 w-4 mr-2" />
                     Download CV
                   </a>

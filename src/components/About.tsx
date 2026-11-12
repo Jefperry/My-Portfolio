@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Database, Shield, Cloud, Users, Lightbulb } from "lucide-react";
+import { Code2, Sparkles, Cloud, Users, Lightbulb, Smartphone } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const About = () => {
@@ -12,22 +12,22 @@ const About = () => {
     {
       icon: Code2,
       title: "Full-Stack Development",
-      description: "Building scalable web applications with React, Next.js, Node.js, and modern frameworks.",
+      description: "Building responsive web applications with TypeScript, React, Next.js, and Hono-backed APIs.",
     },
     {
-      icon: Database,
-      title: "Database & SQL",
-      description: "Designing efficient SQL solutions and database architectures that reduced processing time by 40%.",
+      icon: Smartphone,
+      title: "Mobile Development",
+      description: "Shipping cross-platform mobile apps with React Native and Expo, including auth and core screens.",
     },
     {
-      icon: Shield,
-      title: "API Development",
-      description: "Building RESTful APIs and integrations with FastAPI, Node.js, and JSON processing.",
+      icon: Sparkles,
+      title: "AI & Automation",
+      description: "Integrating OpenAI and Anthropic APIs with LangChain and AI agents to automate business workflows.",
     },
     {
       icon: Cloud,
-      title: "Azure Cloud",
-      description: "Deploying and managing applications on Azure Cloud with Docker, Kubernetes, and CI/CD pipelines.",
+      title: "Cloud & Infrastructure",
+      description: "Deploying applications with Docker, Cloudflare, Hetzner, Coolify, Redis/BullMQ, and CI/CD pipelines.",
     },
   ];
 
@@ -81,7 +81,7 @@ const About = () => {
                     <p className="text-xs text-muted-foreground">Years Experience</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-accent">3.54</p>
+                    <p className="text-3xl font-bold text-accent">3.5</p>
                     <p className="text-xs text-muted-foreground">GPA</p>
                   </div>
                 </div>
@@ -97,18 +97,19 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Solutions-focused <span className="text-foreground font-medium">software engineer</span> with 3 years of experience 
-                developing engineering solutions, prototypes, and proof of concepts aligned to business objectives.
+                <span className="text-foreground font-medium">Software developer</span> building responsive web and
+                mobile applications with <span className="text-foreground font-medium">TypeScript, React, Next.js, and React Native</span>.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Proficient in <span className="text-foreground font-medium">Python, Azure Cloud, API development, and full-stack technologies</span>. 
-                Experienced supporting analytics initiatives, testing frameworks, and engineering programs 
-                while delivering quality results and meeting timelines.
+                Experienced in frontend development, API integration, PostgreSQL database optimization, and
+                application infrastructure, with hands-on work in <span className="text-foreground font-medium">LLM integrations,
+                AI agents, and AI-powered business workflow automation</span>. Also brings Windows/macOS troubleshooting
+                experience and direct technical assistance to patients and customers.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Currently working part-time as a <span className="text-foreground font-medium">Frontend Developer at Mavoo</span> and 
-                open to full-time opportunities where I can apply my technical expertise to build 
-                impactful engineering solutions.
+                Currently founding and building <span className="text-foreground font-medium">LandiSmart</span> while
+                developing software at <span className="text-foreground font-medium">Pinnacle Therapy Center</span>, and
+                open to opportunities where I can apply my technical expertise to build impactful products.
               </p>
             </div>
 

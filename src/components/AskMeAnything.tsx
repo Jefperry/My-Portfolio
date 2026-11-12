@@ -8,24 +8,24 @@ import {
 
 const faqItems = [
   {
-    question: "How do you approach database optimization in large-scale systems?",
+    question: "What kind of software do you build?",
     answer:
-      "I analyze query performance, index strategically, and implement caching. At AUG/Prudential, my optimizations reduced processing time by 40% through smart SQL design and automation.",
+      "I build responsive web and mobile applications with TypeScript, React, Next.js, React Native, and Expo. At LandiSmart I lead the architecture for a property-management platform, and I've shipped frontends and mobile screens for clients like Mavoo.",
   },
   {
-    question: "What cybersecurity practices do you consider essential for modern applications?",
+    question: "How do you use AI in your work?",
     answer:
-      "Regular penetration testing, data encryption (AES/RSA), and compliance with standards like GDPR and ISO 27001 are crucial. I also advocate for least-privilege access and continuous monitoring.",
+      "I integrate OpenAI and Anthropic APIs with LangChain to build AI agents and automate business workflows. At Pinnacle Therapy Center I deployed an AI-powered voice-response and appointment-scheduling workflow, plus an AI email-routing pipeline that cut manual booking and triage tasks.",
   },
   {
-    question: "How do you stay current with evolving technologies in software development?",
+    question: "How do you approach database and performance work?",
     answer:
-      "I contribute to open-source projects, experiment with new frameworks like Next.js, and follow industry leaders. Continuous learning through courses and hands-on projects keeps my skills sharp.",
+      "I design and optimize SQL-backed systems for speed and reliability. At AUG/Prudential my SQL optimization and automated policy validation reduced processing time by 40% and improved client data-tracking efficiency by 20%.",
   },
   {
-    question: "What excites you most about working with AI technologies?",
+    question: "How do you deploy and run what you build?",
     answer:
-      "AI's potential to solve complex problems efficiently fascinates me. My note summarizer project demonstrates how AI can enhance productivity by intelligently processing information.",
+      "I ship with Docker and CI/CD pipelines, and I've deployed on Cloudflare, Hetzner with Coolify, Vercel, and Azure Cloud — using Redis/BullMQ for background jobs and Drizzle ORM with PostgreSQL for data.",
   },
 ];
 
@@ -45,7 +45,8 @@ const AskMeAnything = () => {
               Ask Me Anything.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              A forward-thinking technologist who blends software development with robust cybersecurity practices to create efficient, secure solutions.
+              A software developer who builds web and mobile products with modern TypeScript
+              stacks, and who brings AI, automation, and dependable technical support to every team.
             </p>
           </motion.div>
 
